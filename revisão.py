@@ -11,10 +11,17 @@ faltas= int(input("Digite a quantidade de faltas do aluno:"))
 media= (nota1+nota2+nota3+nota4)/4
 print(media)
 if media >=8:
-    print("Você está aprovado!")
+    situacao="Você está aprovado!"
 elif media >=5:
-    print("Você está na recuperação!")
-elif media <5:
-    print("Você está REPROVADO!")
-if faltas >30:
-    print("Você está REPROVADO pela quantidade de faltas!")
+    recuperacao= float(input())
+    if recuperacao >=(10-media):
+        situacao= "Aprovado na recuperação!"
+    else:
+        situacao= "REPROVADO na RECUPERAÇÃO!"
+else:
+    situacao= "REPROVADO por média!"
+#RELATORIO
+print("Nome: ", nome)
+print("Notas: ", nota1, nota2, nota3, nota4)
+print("Faltas: ", faltas)
+print
