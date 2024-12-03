@@ -29,3 +29,4 @@ while cont < escolha_usuario:
     print("Faltas: ", faltas)
     print("Media: ", media)
     print("Situacao: ", situacao)
+cont = cont + 1
